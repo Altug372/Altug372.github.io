@@ -1,0 +1,313 @@
+/* Genel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar Stil */
+.navbar {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 25px;
+}
+
+.navbar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+.hero-image {
+    position: relative;
+    margin-top: 0px;
+    max-height: 650px; /* Maksimum yükseklik ayarı */
+    overflow: hidden; /* Resmin taşan kısımlarını gizle */
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto; /* Oranları korur */
+    max-height: 650px; /* Maksimum 650px yükseklik */
+    object-fit: cover; /* Resmin bozulmamasını sağlar */
+}
+
+/* Şeffaf Siyah Arka Plan ile Slogan */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    border-radius: 8px;
+}
+
+.slogan {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/***************************/
+/* Hikaye Bölümü Başlangıç */
+/***************************/
+
+.story-section {
+    background-color: white;
+    padding: 50px 20px;
+}
+
+.story-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.story-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.story-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* İsteğe bağlı olarak resmin maksimum yüksekliğini ayarlayabilirsiniz */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/***************************/
+/* Hikaye Bölümü Bitiş */
+/***************************/
+
+/***************************/
+/* Köpek Slider Başlangıç */
+/***************************/
+
+/* Köpek Slider Bölümü Stil */
+.dogs-section {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.dogs-section h2 {
+    font-size: 36px; /* Başlık boyutu artırıldı */
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%; /* Genişlik ayarlandı */
+    margin: 0 auto;
+    overflow: hidden; /* Taşmanın gizlenmesi için */
+}
+
+.cards-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animasyon eklendi */
+}
+
+.card {
+    min-width: 300px; /* Kart boyutu artırıldı */
+    max-width: 300px;
+    margin: 0 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-info {
+    padding: 20px; /* İç boşluk artırıldı */
+}
+
+.card-info h3 {
+    font-size: 24px; /* Yazı boyutu artırıldı */
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    font-size: 18px; /* Yazı boyutu artırıldı */
+    color: #555;
+}
+
+.prev-btn, .next-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background-color: #333 !important; /* Koyu renk */
+    color: white !important; /* Beyaz ok */
+    border: none !important;
+    padding: 20px !important; /* Boyut artırıldı */
+    cursor: pointer !important;
+    border-radius: 50% !important;
+    font-size: 24px !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3) !important; /* Gölge eklendi */
+    z-index: 999 !important; /* Z-index artırıldı */
+    display: block !important; /* Display kontrol edildi */
+    visibility: visible !important; /* Görünürlük kontrol edildi */
+}
+
+.prev-btn {
+    left: 10px !important; /* Sol ok pozisyonu */
+}
+
+.next-btn {
+    right: 10px !important; /* Sağ ok pozisyonu */
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #555; /* Hover durumunda renk değişikliği */
+}
+
+/* Kartların ortalanması */
+.cards-container {
+    justify-content: center;
+}
+
+/* Yanlarda Kartların Yarım Görünmesi İçin Ayarlar */
+.slider-container::before,
+.slider-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 60px; /* Görünmesini istediğiniz kart genişliği */
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.slider-container::before {
+    left: 0;
+    background: linear-gradient(to right, #f4f4f4, transparent);
+}
+
+.slider-container::after {
+    right: 0;
+    background: linear-gradient(to left, #f4f4f4, transparent);
+}
+
+/***************************/
+/* Köpek Slider Bitiş */
+/***************************/
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        display: none;
+    }
+    .navbar.active ul {
+        display: flex;
+    }
+    .navbar ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .slogan {
+        font-size: 24px;
+    }
+    
+    .story-container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .story-content, .story-image {
+        width: 100%;
+    }
+
+    .story-container h2 {
+        font-size: 24px;
+    }
+
+    .story-container p {
+        font-size: 16px;
+    }
+    
+    .prev-btn, .next-btn {
+        display: none;
+    }
+
+    .cards-container {
+        overflow-x: scroll;
+        scrollbar-width: none; /* Firefox */
+        margin: 0;
+    }
+
+    .cards-container::-webkit-scrollbar {
+        display: none; /* Chrome, Safari ve Opera */
+    }
+}
